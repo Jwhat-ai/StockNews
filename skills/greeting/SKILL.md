@@ -1,9 +1,7 @@
 ---
 name: greeting
-description: How to response when others are greeting
+description: When users greet, use this skill to respond with a greeting and an introduction.
 ---
-
-# Greeting Skill
 
 ## Instructions
 
