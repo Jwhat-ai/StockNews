@@ -1,18 +1,15 @@
 import sys
 import os
 # Add parent directory to Python path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
                 
 from dotenv import load_dotenv
 import tushare as ts
 
-# 设置Tushare API token - 替换为你的实际token
-
 load_dotenv() 
 TUSHARE_API_TOKEN = os.getenv('TUSHARE_API_TOKEN')
 
-ts.set_token('TUSHARE_API_TOKEN')
-pro = ts.pro_api()
+pro = ts.pro_api(TUSHARE_API_TOKEN)
 
 # 拉取数据
 df = pro.major_news(**{
