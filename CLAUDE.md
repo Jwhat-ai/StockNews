@@ -51,15 +51,17 @@ This project follows Claude Code harness engineering principles for consistent d
 - Add docstrings for public APIs
 - Maintain API documentation in docs/
 
+<!-- 
 ### Pull Requests
 - One feature per PR
 - Include screenshots if UI changes
 - Link to related issues
+-->
 
 ## Project Structure
 ```
 stocknews/
-├── src/           # Source code
+├── src/           # Source code, python code
 ├── docs/          # Documentation
 ├── tests/         # Test files  
 ├── .coord/        # Coordination files
@@ -69,5 +71,11 @@ stocknews/
 
 ```
 
-## Contact
-For questions about development practices, refer to this document or ask the team.
+# Python Environment
+
+Always execute Python using:
+uv run python
+Install packages using:
+uv add <package>
+Run tests using:
+uv run pytest
